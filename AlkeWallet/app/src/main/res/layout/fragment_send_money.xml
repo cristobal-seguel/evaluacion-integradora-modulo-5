@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.SendMoneyFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageViewAtras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="56dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back_icon" />
+
+        <TextView
+            android:id="@+id/textViewIngresarDinero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:fontFamily="@font/jua_regular"
+            android:text="Enviar dinero"
+            android:textColor="@color/dark_text"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageViewProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="43dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewAtras"
+            android:src="@drawable/profile_picture_y"/>
+
+        <TextView
+            android:id="@+id/textViewProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="21dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/jua_regular"
+            android:text="Yara Khalil"
+            android:textColor="@color/dark_text"
+            android:textSize="14sp"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toEndOf="@+id/imageViewProfile"
+            app:layout_constraintTop_toBottomOf="@+id/textViewIngresarDinero" />
+
+        <TextView
+            android:id="@+id/textViewCorreoProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="1dp"
+            android:alpha="0.4"
+            android:fontFamily="@font/jua_regular"
+            android:gravity="center_vertical"
+            android:text="yara_khalil@gmail.co"
+            android:textColor="@color/dark_text"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/imageViewProfile"
+            app:layout_constraintTop_toBottomOf="@+id/textViewProfile" />
+
+        <TextView
+            android:id="@+id/textViewCantidaATransferir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/jua_regular"
+            android:text="Cantidad a transferir"
+            android:textColor="@color/dark_text"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewProfile" />
+
+        <EditText
+            android:id="@+id/editTextCantidad"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/jua_regular"
+            android:textSize="16sp"
+            android:background="@drawable/background_edit_text_borde_verde"
+            android:inputType="number"
+            android:textColor="@color/secondary_alke_wallet"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCantidaATransferir" />
+
+        <TextView
+            android:id="@+id/textViewNotasTransaccion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/jua_regular"
+            android:text="Notas de transferencia"
+            android:textColor="@color/dark_text"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/editTextCantidad"
+            app:layout_constraintTop_toBottomOf="@+id/editTextCantidad" />
+
+        <EditText
+            android:id="@+id/editTextNotasTransaccion"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="15dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/background_edit_text"
+            android:gravity="top"
+            android:hint="Agregar notas de transferencia(opcional)"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNotasTransaccion" />
+
+        <Button
+            android:id="@+id/buttonEnviarDinero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="183dp"
+            android:backgroundTint="@color/secondary_alke_wallet"
+            android:fontFamily="@font/jua_regular"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:text="Enviar dinero"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNotasTransaccion" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

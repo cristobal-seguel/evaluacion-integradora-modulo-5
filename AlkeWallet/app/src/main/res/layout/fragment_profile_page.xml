@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.ProfilePageFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F3F4F5">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="56dp"
+                android:fontFamily="@font/jua_regular"
+                android:gravity="center_vertical"
+                android:text="Mi perfil"
+                android:textColor="@color/dark_text"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/edit_icon_svg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+            <ImageView
+                android:id="@+id/imageViewProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/profile_picture_my_profile_png"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <TextView
+                android:id="@+id/textViewProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="23dp"
+                android:fontFamily="@font/jua_regular"
+                android:gravity="center_vertical"
+                android:text="Amanda Alkemy"
+                android:textColor="@color/dark_text"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewProfile" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <Button
+            android:id="@+id/buttonMiInformacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/profile_icon_svg"
+            android:drawableRight="@drawable/arrow_icon_svg"
+            android:text="Mi información"
+            android:textAlignment="textStart"
+            android:layout_marginHorizontal="15dp"
+            app:cornerRadius="10dp"
+            android:backgroundTint="#F3F4F5"
+            android:textColor="@color/dark_text"
+            android:fontFamily="@font/jua_regular"
+            android:textSize="14sp"
+            android:layout_marginTop="40dp"/>
+        <Button
+            android:id="@+id/buttonMisTarjetas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/card_icon_svg"
+            android:drawableRight="@drawable/arrow_icon_svg"
+            android:text="Mis tarjetas"
+            android:textAlignment="textStart"
+            android:layout_marginHorizontal="15dp"
+            app:cornerRadius="10dp"
+            android:backgroundTint="#F3F4F5"
+            android:textColor="@color/dark_text"
+            android:fontFamily="@font/jua_regular"
+            android:textSize="14sp"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/buttonMisOpciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/settings_icon"
+            android:drawableRight="@drawable/arrow_icon_svg"
+            android:text="Opciones"
+            android:textAlignment="textStart"
+            android:layout_marginHorizontal="15dp"
+            app:cornerRadius="10dp"
+            android:backgroundTint="#F3F4F5"
+            android:textColor="@color/dark_text"
+            android:fontFamily="@font/jua_regular"
+            android:textSize="14sp"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/buttonCentroAyuda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/help_icon"
+            android:drawableRight="@drawable/arrow_icon_svg"
+            android:text="Centro de ayuda"
+            android:textAlignment="textStart"
+            android:layout_marginHorizontal="15dp"
+            app:cornerRadius="10dp"
+            android:backgroundTint="#F3F4F5"
+            android:textColor="@color/dark_text"
+            android:fontFamily="@font/jua_regular"
+            android:textSize="14sp"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="view.SignupPageFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_login_page_svg">
+
+            <TextView
+                android:id="@+id/textViewRegistrarse"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="40dp"
+                android:fontFamily="@font/jua_regular"
+                android:lineSpacingExtra="10dp"
+                android:padding="10dp"
+                android:text="Registrarse y empeza a transferir"
+                android:textColor="#1A1A1A"
+                android:textSize="32sp"
+                app:layout_constraintBottom_toTopOf="@id/textViewNombre"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/jua_regular"
+                android:text="Nombre"
+                android:textColor="#1A1A1A"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewRegistrarse" />
+
+            <EditText
+                android:id="@+id/editTextTextNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/background_edit_text"
+                android:fontFamily="@font/jua_regular"
+                android:hint="Ingresar nombre"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewNombre" />
+
+            <TextView
+                android:id="@+id/textViewApellido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/jua_regular"
+                android:text="Apellido"
+                android:textColor="#1A1A1A"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextNombre" />
+
+            <EditText
+                android:id="@+id/editTextApellido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/background_edit_text"
+                android:fontFamily="@font/jua_regular"
+                android:hint="Ingresar apellido"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewApellido" />
+
+            <TextView
+                android:id="@+id/textViewEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/jua_regular"
+                android:text="Email"
+                android:textColor="#1A1A1A"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextApellido" />
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/background_edit_text"
+                android:fontFamily="@font/jua_regular"
+                android:hint="Ingresar Email"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewEmail" />
+
+            <TextView
+                android:id="@+id/textViewContraseña"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/jua_regular"
+                android:text="Contraseña"
+                android:textColor="#1A1A1A"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="30dp"
+                android:alpha="0.5"
+                app:endIconMode="password_toggle"
+                app:layout_constraintTop_toBottomOf="@+id/textViewContraseña">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditTextContrasena"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_edit_text"
+                    android:fontFamily="@font/jua_regular"
+                    android:hint="Ingresar tu contraseña"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textViewRepetirContraseña"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/jua_regular"
+                android:text="Contraseña"
+                android:textColor="#1A1A1A"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPassword" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutReingresarPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="30dp"
+                android:alpha="0.5"
+                app:endIconMode="password_toggle"
+                app:layout_constraintTop_toBottomOf="@+id/textViewRepetirContraseña">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditTextReingresarContrasena"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_edit_text"
+                    android:fontFamily="@font/jua_regular"
+                    android:hint="Rengresar tu contraseña"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/buttonCrearCuenta"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="59dp"
+                android:layout_marginEnd="30dp"
+                android:backgroundTint="@color/primary_alke_wallet"
+                android:text="Crear Cuenta"
+                android:textColor="@color/white"
+                app:cornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutReingresarPassword" />
+
+            <TextView
+                android:id="@+id/textViewYaTienesCuenta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Ya tienes una cuenta?"
+                android:textColor="#1A87DD"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonCrearCuenta" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginSignupPage">
+    <fragment
+        android:id="@+id/signupPage"
+        android:name="com.example.alkewallet.view.SignupPageFragment"
+        android:label="fragment_signup_page"
+        tools:layout="@layout/fragment_signup_page">
+        <action
+            android:id="@+id/action_signupPage_to_loginPage"
+            app:destination="@id/loginPage"
+            app:popUpTo="@id/loginSignupPage"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_signupPage_to_homePage"
+            app:destination="@id/homePage"
+            app:popUpTo="@id/loginSignupPage"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginPage"
+        android:name="com.example.alkewallet.view.LoginPageFragment"
+        android:label="fragment_login_page"
+        tools:layout="@layout/fragment_login_page" >
+        <action
+            android:id="@+id/action_loginPage_to_signupPage"
+            app:destination="@id/signupPage"
+            app:popUpTo="@id/loginSignupPage"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_loginPage_to_homePage"
+            app:destination="@id/homePage"
+            app:popUpTo="@id/loginSignupPage"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginSignupPage"
+        android:name="com.example.alkewallet.view.LoginSignupPageFragment"
+        android:label="fragment_login_signup_page"
+        tools:layout="@layout/fragment_login_signup_page" >
+        <action
+            android:id="@+id/action_loginSignupPage_to_loginPage"
+            app:destination="@id/loginPage" />
+        <action
+            android:id="@+id/action_loginSignupPage_to_signupPage"
+            app:destination="@id/signupPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/homePage"
+        android:name="com.example.alkewallet.view.HomePageFragment"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page" >
+        <argument
+            android:name="idUser"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_homePage_to_requestMoneyFragment"
+            app:destination="@id/requestMoneyFragment" />
+        <action
+            android:id="@+id/action_homePage_to_sendMoneyFragment"
+            app:destination="@id/sendMoneyFragment" />
+        <action
+            android:id="@+id/action_homePage_to_profilePageFragment"
+            app:destination="@id/profilePageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/requestMoneyFragment"
+        android:name="com.example.alkewallet.view.RequestMoneyFragment"
+        android:label="fragment_request_money"
+        tools:layout="@layout/fragment_request_money" >
+        <argument
+            android:name="idUserReceiver"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_requestMoneyFragment_pop"
+            app:popUpTo="@id/requestMoneyFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/sendMoneyFragment"
+        android:name="com.example.alkewallet.view.SendMoneyFragment"
+        android:label="fragment_send_money"
+        tools:layout="@layout/fragment_send_money" >
+        <argument
+            android:name="userIdSender"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_sendMoneyFragment_pop"
+            app:popUpTo="@id/sendMoneyFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/profilePageFragment"
+        android:name="com.example.alkewallet.view.ProfilePageFragment"
+        android:label="profile_page"
+        tools:layout="@layout/fragment_profile_page" >
+        <argument
+            android:name="idUser"
+            app:argType="integer" />
+    </fragment>
+</navigation>

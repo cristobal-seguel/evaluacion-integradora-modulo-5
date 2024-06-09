@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.RequestMoneyFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageViewAtras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="56dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back_icon" />
+
+        <TextView
+            android:id="@+id/textViewIngresarDinero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:fontFamily="@font/jua_regular"
+            android:text="Ingresar dinero"
+            android:textColor="@color/dark_text"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageViewProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="43dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewAtras"
+            android:src="@drawable/picture_reem_khaled" />
+
+        <TextView
+            android:id="@+id/textViewProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="21dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/jua_regular"
+            android:text="Reem Khaled"
+            android:textColor="@color/dark_text"
+            android:textSize="14sp"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toEndOf="@+id/imageViewProfile"
+            app:layout_constraintTop_toBottomOf="@+id/textViewIngresarDinero" />
+
+        <TextView
+            android:id="@+id/textViewCorreoProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="1dp"
+            android:alpha="0.4"
+            android:fontFamily="@font/jua_regular"
+            android:gravity="center_vertical"
+            android:text="reem_1993@gmail.com"
+            android:textColor="@color/dark_text"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/imageViewProfile"
+            app:layout_constraintTop_toBottomOf="@+id/textViewProfile" />
+
+        <TextView
+            android:id="@+id/textViewCantidaAIngresar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/jua_regular"
+            android:text="Cantidad a ingresar"
+            android:textColor="@color/dark_text"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewProfile" />
+
+        <EditText
+            android:id="@+id/editTextTextCantidad"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/jua_regular"
+            android:textSize="16sp"
+            android:background="@drawable/background_edit_text_borde_azul"
+            android:inputType="number"
+            android:textColor="#1A87DD"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCantidaAIngresar" />
+
+        <TextView
+            android:id="@+id/textViewNotasTransaccion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/jua_regular"
+            android:text="Notas de transferencia"
+            android:textColor="@color/dark_text"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextCantidad"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextCantidad" />
+
+        <EditText
+            android:id="@+id/editTextNotasTransaccion"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="15dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/background_edit_text"
+            android:gravity="top"
+            android:hint="Agregar notas de transferencia(opcional)"
+            android:textSize="14sp"
+            android:maxLength="200"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNotasTransaccion" />
+
+        <Button
+            android:id="@+id/buttonIngresarDinero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="183dp"
+            android:backgroundTint="#1A87DD"
+            android:fontFamily="@font/jua_regular"
+            android:textSize="14sp"
+            app:cornerRadius="10dp"
+            android:text="Ingresar dinero"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNotasTransaccion" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
