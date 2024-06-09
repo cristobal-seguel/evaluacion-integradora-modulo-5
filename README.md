@@ -15,6 +15,3 @@
 - El fragmento RequestMoneyFragment elije de forma aleatoria el usuario de quién se recibirá dinero.
 - EL envío y el ingreso de dinero están funcionales, actualizandose los datos de los usuarios involucrados y registrandose las transacciones.
 - Se utiliza la clase LocalDateTime para el registro de la fecha y hora de cada transacción realizada.
-
-- 
-- 
